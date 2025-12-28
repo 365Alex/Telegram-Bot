@@ -5,7 +5,3 @@ CREATE TABLE notification_task (
     message_text TEXT NOT NULL,
     notification_date_time TIMESTAMP NOT NULL
 );
-
--- changeset developer:2
-CREATE INDEX idx_notification_task_datetime
-ON notification_task(notification_date_time);

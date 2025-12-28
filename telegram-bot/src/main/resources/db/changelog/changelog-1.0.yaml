@@ -1,37 +1,30 @@
 databaseChangeLog:
   - changeSet:
       id: 1
-      author: developer
+      author: telegram-bot
       changes:
         - createTable:
             tableName: notification_task
             columns:
               - column:
                   name: id
-                  type: BIGSERIAL
+                  type: bigint
+                  autoIncrement: true
                   constraints:
                     primaryKey: true
                     nullable: false
               - column:
                   name: chat_id
-                  type: BIGINT
+                  type: bigint
                   constraints:
                     nullable: false
               - column:
                   name: message_text
-                  type: TEXT
+                  type: varchar(1000)
                   constraints:
                     nullable: false
               - column:
                   name: notification_date_time
-                  type: TIMESTAMP
+                  type: timestamp
                   constraints:
                     nullable: false
-
-        - createIndex:
-            indexName: idx_notification_task_datetime
-            tableName: notification_task
-            columns:
-              - column:
-                  name: notification_date_time
-                  sortOrder: ASC
