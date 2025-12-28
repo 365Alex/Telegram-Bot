@@ -59,8 +59,7 @@ public class TelegramBotUpdatesListener implements UpdatesListener {
     }
 
     private void sendStartMessage(Long chatId) {
-        String welcomeMessage = """
-                Привет! Я бот для создания напоминай""";
+        String welcomeMessage = "Привет! Я бот для создания напоминай";
 
         SendMessage message = new SendMessage(chatId, welcomeMessage);
         telegramBot.execute(message);
