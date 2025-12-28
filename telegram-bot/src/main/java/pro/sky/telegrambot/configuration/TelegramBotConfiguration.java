@@ -17,6 +17,7 @@ public class TelegramBotConfiguration {
         TelegramBot bot = new TelegramBot(token);
         bot.execute(new DeleteMyCommands());
         return bot;
+
     }
 
 }
