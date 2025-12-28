@@ -34,7 +34,6 @@ public class TelegramBotUpdatesListener implements UpdatesListener {
     private static final DateTimeFormatter DATE_TIME_FORMATTER = DateTimeFormatter.ofPattern("dd.MM.yyyy HH:mm");
     private static final String START_COMMAND = "/start";
 
-
     @PostConstruct
     public void init() {
         telegramBot.setUpdatesListener(this);
